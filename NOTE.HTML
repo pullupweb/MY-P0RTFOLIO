@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .all {
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: 40px;
+      }
+      .heading {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+      }
+      
+      .date {
+        background-color: turquoise;
+        color: white;
+        width: 100%;
+        border-radius: 5px;
+        padding: 18px;
+        border: 1px cadetblue;
+        margin: auto;
+        margin-top: 20px;
+        transition: 0.4s;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+.date:hover{
+    background-color: yellowgreen;
+}
+.date:after {
+    content: "\1F447";
+    padding-left: 100%;
+}
+.date:before {
+    content: "\1F447";
+    content: none;
+}
+
+      .notes {
+        padding: 0px 18px;
+        margin-top: 10px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+    @media screen and (max-width:768px) {
+        .all{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    </style>
+  </head>
+  <body>
+       <nav>
+      <div class="logo">
+        <img class="image" src="./IMAGES/Group 2.png" alt="" />
+        <h4>my text</h4>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./assignment.html">ASSIGNMENTS</a>
+        </li>
+        <li>
+          <a href="./NOTE.HTML">LESSONS</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="all">
+      <div class="heading">
+        <h2>pull up</h2>
+        <p>
+          this is all that i have learnt
+        </p>
+      </div>
+      <button class="date">
+        Day 1
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          blanditiis atque totam soluta delectus corrupti quidem quia. Nulla
+          modi facilis impedit ducimus odio ad voluptas voluptatum neque,
+          repudiandae perferendis libero iste cupiditate adipisci animi dicta
+          commodi quis est laudantium fugit.
+        </p>
+      </div>
+      <button class="date">
+        Day 2
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          blanditiis atque totam soluta delectus corrupti quidem quia. Nulla
+          modi facilis impedit ducimus odio ad voluptas voluptatum neque,
+          repudiandae perferendis libero iste cupiditate adipisci animi dicta
+          commodi quis est laudantium fugit.
+        </p>
+      </div>
+      <button class="date">
+        DAY 3
+      </button>
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          blanditiis atque totam soluta delectus corrupti quidem quia. Nulla
+          modi facilis impedit ducimus odio ad voluptas voluptatum neque,
+          repudiandae perferendis libero iste cupiditate adipisci animi dicta
+          commodi quis est laudantium fugit.
+        </p>
+      </div>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("date");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>

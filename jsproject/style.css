@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: linear-gradient(120deg, rgb(50, 148, 72), rgb(21, 124, 143));
+    color: rgb(131, 11, 11);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.5rem;
+}
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+form button:hover{
+    background: tomato;
+}
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.todo-lits {
+    min-width: 30%;
+    list-style: none;
+
+}
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.todo li {
+
+    flex: 1;
+
+}
+.trash-btn,
+.conplete-btn{
+    background: tomato;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.conplete-btn {
+    background: green;
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 1;
+}
+

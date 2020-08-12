@@ -1,0 +1,33 @@
+.btn {
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(247, 231, 140);
+    color: #000000;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-ctn {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 20rem 10rem;
+    padding: 40px;
+    column-gap: 40px;   
+}
+
+@media screen and (max-width: 768px) {
+    .card-ctn {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+}
